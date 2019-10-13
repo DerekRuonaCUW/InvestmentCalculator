@@ -19,12 +19,36 @@ public class Investment
 		//return the current value of this investment taking
 		//time and an average 8% yearly or 0.67% monthly return
 		//over afterHowManyMonths number of months
+		
+		double value = 0;
+		
+		for(int i=1; i <= afterHowManyMonth; i ++)
+		{
+			for (Contribution a : theContributions)
+			{
+				if (i == (a).monthNumber)
+				{
+					value += a.amount;
+				}
+						
+			}
+			value *= 1.0067;
+		}
+		
+		return value;
+		
 	}
 	
 	double getTotalContributions()
 	{
-		//return the total amount ever investment not taking into
-		//account interest.
+		double total =0;
+		
+		for (Contribution i : theContributions)
+		{
+			total += i.amount;
+		}
+		
+		return total;
 	}
 	
 }

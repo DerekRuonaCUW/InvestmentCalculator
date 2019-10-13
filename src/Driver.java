@@ -16,5 +16,8 @@ public class Driver
 		int totalInvestmentTime = 156;
 		System.out.println(a.getCurrentValue(totalInvestmentTime));
 		System.out.println(b.getCurrentValue(totalInvestmentTime));
+		
+		System.out.println(a.getTotalContributions());
+		System.out.println(b.getTotalContributions());
 	}
 }
